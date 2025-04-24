@@ -17,8 +17,8 @@
   <p><strong>Habitable :</strong> {{ "Oui" if planet[5] else "Non" }}</p>
   <p><strong>Description :</strong> {{ planet[6] }}</p>
   <p><strong>Date de découverte :</strong> {{ planet[8] }}</p>
-  {% if planet['image_url'] %}
-  <img src="{{ url_for('uploaded_file', filename=planet['image_url']) }}" alt="{{ planet['name'] }}" width="400">
+  {% if planet[7] %}
+    <img src="/{{ planet[7] }}" alt="Image planète" width="300">
   {% endif %}
 
   <p><a href="/planets">⬅ Retour au catalogue</a></p>
