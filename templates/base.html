@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}SpaceXplorer{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <nav class="navbar">
+    <a href="/">🏠 Accueil</a>
+    <a href="/planets">🌍 Planètes</a>
+    <a href="/add_planet">➕ Planète</a>
+    <a href="/explorers">🧑‍🚀 Explorateurs</a>
+    <a href="/add_explorer">➕ Explorateur</a>
+    <a href="/reserve">🚀 Réserver</a>
+    <a href="/missions">📋 Missions</a>
+
+    {% if session.get('admin') %}
+      <a href="/logout" class="admin">🔓 Déconnexion</a>
+    {% else %}
+      <a href="/login" class="admin">🔐 Connexion</a>
+    {% endif %}
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

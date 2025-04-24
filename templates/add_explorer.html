@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Ajouter un explorateur</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>🧑‍🚀 Ajouter un explorateur</h1>
+
+  <form method="POST">
+    <label>Nom :</label><br>
+    <input type="text" name="name" required><br>
+
+    <label>Spécialité :</label><br>
+    <input type="text" name="speciality" required><br>
+
+    <label>Expérience (en années) :</label><br>
+    <input type="number" name="experience" min="0" required><br>
+
+    <label>Email :</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <input type="submit" value="Ajouter">
+  </form>
+
+  <p><a href="/explorers">⬅ Retour à la liste des explorateurs</a></p>
+</body>
+</html>

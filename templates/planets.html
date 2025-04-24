@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue des planètes</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>Catalogue des planètes 🌌</h1>
+
+  <table border="1">
+    <tr>
+      <th>Nom</th>
+      <th>Type</th>
+      <th>Distance</th>
+      <th>Température</th>
+      <th>Habitable</th>
+      <th>Découverte</th>
+    </tr>
+    {% for planet in planets %}
+    <tr>
+    <td><a href="/planet/{{ planet[0] }}">{{ planet[1] }}</a></td>
+    <td>{{ planet[2] }}</td>  <!-- type -->
+      <td>{{ planet[3] }} AL</td>
+      <td>{{ planet[4] }} °C</td>
+      <td>{{ "Oui" if planet[5] else "Non" }}</td>
+      <td>{{ planet[8] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p><a href="/">⬅ Retour à l'accueil</a></p>
+  <p><a href="/add_planet" style="font-size: 18px;">➕ Ajouter une planète</a></p>
+</body>
+</html>

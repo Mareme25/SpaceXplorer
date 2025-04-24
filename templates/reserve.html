@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réserver une mission</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>Réserver une mission 🚀</h1>
+
+  <form method="POST">
+    <label>Planète :</label><br>
+    <select name="planet_id">
+      {% for p in planets %}
+        <option value="{{ p[0] }}">{{ p[1] }}</option>
+      {% endfor %}
+    </select><br>
+
+    <label>Explorateur :</label><br>
+    <select name="explorer_id">
+      {% for e in explorers %}
+        <option value="{{ e[0] }}">{{ e[1] }}</option>
+      {% endfor %}
+    </select><br>
+
+    <label>Date de départ :</label><br>
+    <input type="date" name="departure_date" required><br>
+
+    <label>Durée (jours) :</label><br>
+    <input type="number" name="duration" required><br><br>
+
+    <input type="submit" value="Réserver">
+  </form>
+
+  <p><a href="/">⬅ Retour à l'accueil</a></p>
+</body>
+</html>

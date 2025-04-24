@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Missions</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>Liste des missions 🚀</h1>
+
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Planète</th>
+      <th>Explorateur</th>
+      <th>Date départ</th>
+      <th>Durée (jours)</th>
+      <th>Statut</th>
+    </tr>
+    {% for m in missions %}
+    <tr>
+      <td>{{ m[0] }}</td>
+      <td>{{ m[1] }}</td>
+      <td>{{ m[2] }}</td>
+      <td>{{ m[3] }}</td>
+      <td>{{ m[4] }}</td>
+      <td>{{ m[5] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p><a href="/">⬅ Retour à l'accueil</a></p>
+</body>
+</html>

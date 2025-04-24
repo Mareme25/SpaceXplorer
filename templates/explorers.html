@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Explorateurs</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>Nos Explorateurs 👩‍🚀</h1>
+
+  <table border="1">
+    <tr>
+      <th>Nom</th>
+      <th>Spécialité</th>
+      <th>Expérience</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    {% for e in explorers %}
+    <tr>
+      <td>{{ e[1] }}</td>
+      <td>{{ e[2] }}</td>
+      <td>{{ e[3] }} ans</td>
+      <td>{{ e[4] }}</td>
+    <td>
+        <a href="/edit_explorer/{{ e[0] }}">✏️ Modifier</a> |
+        <a href="/delete_explorer/{{ e[0] }}" onclick="return confirm('Supprimer ?')">🗑️ Supprimer</a> |
+        <a href="/explorer/{{ e[0] }}/missions">📋 Voir missions</a>
+    </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p><a href="/">⬅ Retour à l'accueil</a></p>
+</body>
+</html>

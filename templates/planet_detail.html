@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détail de la planète</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>{{ planet[1] }} 🪐</h1>
+  <p><strong>Type :</strong> {{ planet[2] }}</p>
+  <p><strong>Distance :</strong> {{ planet[3] }} années-lumière</p>
+  <p><strong>Température :</strong> {{ planet[4] }} °C</p>
+  <p><strong>Habitable :</strong> {{ "Oui" if planet[5] else "Non" }}</p>
+  <p><strong>Description :</strong> {{ planet[6] }}</p>
+  <p><strong>Date de découverte :</strong> {{ planet[8] }}</p>
+  {% if planet[7] %}
+    <img src="/{{ planet[7] }}" alt="Image planète" width="300">
+  {% endif %}
+
+  <p><a href="/planets">⬅ Retour au catalogue</a></p>
+</body>
+</html>

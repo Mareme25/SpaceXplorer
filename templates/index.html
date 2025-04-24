@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>SpaceXplorer - Accueil</title>
+</head>
+<body>
+  <h1>🛰️ SpaceXplorer – Tableau de bord</h1>
+
+  <p><strong>Planètes enregistrées :</strong> {{ planet_count }}</p>
+  <p><strong>Explorateurs disponibles :</strong> {{ explorer_count }}</p>
+  <p><strong>Missions planifiées :</strong> {{ mission_count }}</p>
+
+  <hr>
+
+  <h2>Navigation</h2>
+  <ul>
+    <li><a href="/planets">🌍 Catalogue des planètes</a></li>
+    <li><a href="/add_planet">➕ Ajouter une planète</a></li>
+    <li><a href="/explorers">🧑‍🚀 Voir les explorateurs</a></li>
+    <li><a href="/reserve">🚀 Réserver une mission</a></li>
+    <li><a href="/missions">📋 Suivi des missions</a></li>
+  </ul>
+</body>
+</html>

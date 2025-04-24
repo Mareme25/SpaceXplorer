@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Modifier un explorateur</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>✏️ Modifier un explorateur</h1>
+
+  <form method="POST">
+    <label>Nom :</label><br>
+    <input type="text" name="name" value="{{ explorer[1] }}" required><br>
+
+    <label>Spécialité :</label><br>
+    <input type="text" name="speciality" value="{{ explorer[2] }}" required><br>
+
+    <label>Expérience :</label><br>
+    <input type="number" name="experience" value="{{ explorer[3] }}" required><br>
+
+    <label>Email :</label><br>
+    <input type="email" name="email" value="{{ explorer[4] }}" required><br><br>
+
+    <input type="submit" value="Enregistrer">
+  </form>
+
+  <p><a href="/explorers">⬅ Retour</a></p>
+</body>
+</html>

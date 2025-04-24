@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Missions de l'explorateur</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Nom de la page</title>
+  </head>  
+<body>
+  <h1>Missions de {{ explorer }} 🧑‍🚀</h1>
+
+  {% if missions %}
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Planète</th>
+      <th>Date de départ</th>
+      <th>Durée (jours)</th>
+      <th>Statut</th>
+    </tr>
+    {% for m in missions %}
+    <tr>
+      <td>{{ m[0] }}</td>
+      <td>{{ m[1] }}</td>
+      <td>{{ m[2] }}</td>
+      <td>{{ m[3] }}</td>
+      <td>{{ m[4] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>Aucune mission trouvée pour cet explorateur.</p>
+  {% endif %}
+
+  <p><a href="/explorers">⬅ Retour aux explorateurs</a></p>
+  <p><a href="/">⬅ Retour à l'accueil</a></p>
+</body>
+</html>
